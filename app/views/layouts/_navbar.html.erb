@@ -40,7 +40,7 @@
           </a>
         </li>
         <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li><%= link_to 'Logout', session_path, method: :delete, data: { turbo_method: :delete } %></li>
       </ul>
     </div>
   </div>
