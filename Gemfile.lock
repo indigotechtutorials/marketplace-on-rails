@@ -323,7 +323,7 @@ GEM
     stringio (3.1.6)
     tailwind_registration (0.0.2)
       rails (>= 8.0)
-    tailwindcss-rails (4.2.1)
+    tailwindcss-rails (4.2.2)
       railties (>= 7.0.0)
       tailwindcss-ruby (~> 4.0)
     tailwindcss-ruby (4.0.17)
