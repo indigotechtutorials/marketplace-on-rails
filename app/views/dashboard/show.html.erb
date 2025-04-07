@@ -10,8 +10,10 @@
       <div class="card w-96 bg-base-100 card-sm shadow-sm">
         <div class="card-body">
           <h2 class="card-title"><%= store.name %></h2>
-          <p> <%= store.description.first(100) %></p>
-          <%= image_tag(store.banner_image, class: "w-full h-24 object-cover") if store.banner_image.attached? %>
+          <div class="line-clamp-2">
+            <%= store.description %>
+          </div>
+          <%= banner_image_for(store, class: "w-full h-32 object-cover rounded-t-lg") %>
           <div class="justify-end card-actions">
             <%= link_to "View store", store, class: "btn btn-primary" %>
           </div>

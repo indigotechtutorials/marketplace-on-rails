@@ -3,7 +3,7 @@ class StoresController < ApplicationController
 
   # GET /stores or /stores.json
   def index
-    @stores = Current.user.stores.all
+    @stores = Current.user.stores
   end
 
   # GET /stores/1 or /stores/1.json
@@ -25,11 +25,9 @@ class StoresController < ApplicationController
 
     respond_to do |format|
       if @store.save
-        format.html { redirect_to @store, notice: "Store was successfully created." }
-        format.json { render :show, status: :created, location: @store }
+        redirect_to @store, notice: "Store was successfully created."
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @store.errors, status: :unprocessable_entity }
+        render :new, status: :unprocessable_entity
       end
     end
   end
@@ -38,11 +36,9 @@ class StoresController < ApplicationController
   def update
     respond_to do |format|
       if @store.update(store_params)
-        format.html { redirect_to @store, notice: "Store was successfully updated." }
-        format.json { render :show, status: :ok, location: @store }
+        redirect_to @store, notice: "Store was successfully updated."
       else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @store.errors, status: :unprocessable_entity }
+        render :edit, status: :unprocessable_entity
       end
     end
   end
