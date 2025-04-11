@@ -18,8 +18,11 @@
   </head>
   <body>
     <%= render "layouts/navbar2" %>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <%# <main class="container mx-auto mt-28 px-5 flex"> %>
+    <main>
       <%= yield %>
+      <%= render "layouts/collections" %>
     </main>
+    <%= render "layouts/footer" %>
   </body>
 </html>
